@@ -25,6 +25,8 @@ var refresh =function()
   setTimeout(update,1000);
 }
 
+update();
+
 function getFileName(){
   return window.location.href.split('/').pop();
 }
@@ -43,7 +45,4 @@ opt.selected=true;
 document.getElementById('form').select.onchange=function(){
   location.href = document.getElementById('form').select.value
 }
-
-update();
-
 
