@@ -58,7 +58,7 @@ function setCookie(c_name,value,expiredays)
   }
   else
   {
-    s=";";
+    s += ";";
   }
   document.cookis=s;
 }
@@ -95,7 +95,7 @@ else
 }
 
 var current_time = new Date();
-setCookie('lastDate', current_time.toString(),7);
+setCookie('lastDate', current_time.toString(), 7);
 
 update();
 
