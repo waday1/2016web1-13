@@ -23,4 +23,10 @@ var refresh =function()
   setTimeout(update,1000);
 }
 
+document.getElementById('form').select.onchange=function(){
+  location.href = document.getElementById('form').select.value
+}
+
 update();
+
+
