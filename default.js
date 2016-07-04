@@ -66,7 +66,7 @@ function setCookie(c_name,value,expiredays)
 function getCookie(c_name)
 {
   var st="";
-  var ed"";
+  var ed="";
   if(o < document.cookie.length)
   {
     st = document.cookie.indexOf(c_name + "=");
