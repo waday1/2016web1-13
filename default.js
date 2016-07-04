@@ -20,7 +20,7 @@ refresh();
 
 var refresh =function()
 {
-  setTineout(uodate,1000);
+  setTineout(update,1000);
 }
 
 uodate();
