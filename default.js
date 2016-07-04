@@ -1,41 +1,16 @@
-var number = ['Fizz','Buzz'];
-var answer
-
-var Decision = function(i)
+var separate_time =function(time)
 {
-  if(i % 3 === 0 && i % 5 === 0)
-  {
-    return number[0]+number[1];
-  }  
-  else if(i % 3 === 0)
-  {
-    return number[0];
-  }
-   else if(i % 5 === 0)
-  {
-    return number[1];
-  }
-   else 
-  {
-    return i;
-  }
+  var sec = time.getSeconds();
+  var min = time.getMinutes();
+  var hours = time.getHours();
+  var days = time.getDate();
+  var month = time.getMonth();
+  var year = time.getFullYear();
+  return[sec,min,hours,days,month,year]
 }
 
+var now = new Date();
+var counter = separate_time(now)
 
-for(var i = 1; i < 101; i++)
-{
-  var li = document.createElement('li');
-  
-  li.textContent = i + '回目:' + Decision(i);
-
-  document.getElementById('FizzBuzz').appendChild(li);
-}
-
-
-answer =parseInt(window.prompt('自然数を入れてね！'));
-
-li= document.createElement('li');
-  
-li.textContent = answer + 'は:' + Decision(answer);
-   
-document.getElementById('form').appendChild(li);
+document.getElementById('countdown').textContent=
+counter[5]+'年'+counter[4]+'月'+counter[3]+'日'+counter[2]+'時'+counter[1]+'分'+counter[0]+'秒';
