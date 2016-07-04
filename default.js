@@ -8,7 +8,7 @@ var separate_time =function(time)
   var year = time.getFullYear();
   return[sec,min,hours,days,month,year]
 }
-var uodate =function()
+var update =function()
 {
 var now = new Date();
 var counter = separate_time(now)
@@ -20,7 +20,7 @@ refresh();
 
 var refresh =function()
 {
-  setTineout(update,1000);
+  setTimeout(update,1000);
 }
 
-uodate();
+update();
